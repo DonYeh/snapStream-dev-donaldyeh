@@ -1,20 +1,18 @@
 <template>
-    <div>
+    <div class="flex flex-col content-center mt-20">
         
-        <div>
-            <label>number: </label>
+        <div class="pb-3 text-center text-xl">
+            <label class="item pr-2">number: </label>
             <input type="number" required v-model="number" >
         </div>
-        <div v-if="numberError.length">{{ numberError }}</div>
-        <div>
-            <label>base: </label>
+        <div class="text-red-600 text-center" v-if="numberError.length">{{ numberError }}</div>
+        <div class="pb-3 text-center text-xl">
+            <label class="pr-2">base: </label>
             <input type="number" required v-model="base" >
         </div>
-        <div v-if="baseError.length">{{ baseError }}</div>
-
-        
-        <div>
-            <p v-if="number || number === 0">output: {{number}} base {{base}} = <span v-if="base !== undefined">{{answer.answer}}</span></p>
+        <div class="text-red-600 text-center" v-if="baseError.length">{{ baseError }}</div>
+        <div class="text-center text-xl">
+            <p v-if="number || number === 0" class="pr-2">output: {{number}} base {{base}} = <span v-if="base !== undefined">{{answer.answer}}</span></p>
         </div>
         
 

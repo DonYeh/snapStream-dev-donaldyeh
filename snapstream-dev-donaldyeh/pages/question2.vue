@@ -1,16 +1,16 @@
 <template>
-    <div>     
-        <table>
-            <thead>
+    <div class="mt-20">     
+        <table class="table-auto mx-auto text-left">
+            <thead class="uppercase">
                 <tr>
-                    <th>User</th>
-                    <th>Team</th>
+                    <th class="px-4 py-1">User</th>
+                    <th class="px-4 py-1">Team</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="person in users.users" :key="person.id" @click="fetchUserActivity(person.id)" class="cursor-pointer hover:text-blue-500 focus:text-blue-700"> 
-                    <td>{{ person.name }}</td> 
-                    <td>{{ person.team }}</td> 
+                    <td class="px-4">{{ person.name }}</td> 
+                    <td class="px-4">{{ person.team }}</td> 
                 </tr>
             </tbody>
         </table>
@@ -18,19 +18,19 @@
         <br/>
 
     <div v-if="selectedUserActivity.length"  >
-        <h2>Activity Details for {{users.users.filter((user)=>user.id === selectedUserActivity[0].userId)[0].name}} (userID: {{ selectedUserActivity[0].userId }})</h2>
+        <h2 class="text-1xl text-center pb-2">Activity Details for {{users.users.filter((user)=>user.id === selectedUserActivity[0].userId)[0].name}} (userID: {{ selectedUserActivity[0].userId }})</h2>
     
-        <table>
-            <thead>
+        <table class="table-auto mx-auto text-left">
+            <thead class="uppercase">
                 <tr>
-                    <th>Workout</th>
-                    <th>Minutes</th>
+                    <th class="px-3 py-1">Workout</th>
+                    <th class="px-3 py-1">Minutes</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="userActivity in selectedUserActivity" :key="userActivity.id">
-                    <td>{{ userActivity.workout }}</td> 
-                    <td>{{ userActivity.minutes }}</td> 
+                    <td class="px-3">{{ userActivity.workout }}</td> 
+                    <td class="px-3">{{ userActivity.minutes }}</td> 
                 </tr>
             </tbody>
         </table>
