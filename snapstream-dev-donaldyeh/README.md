@@ -1,3 +1,7 @@
+## notes
+
+using a default vue with navbar and inserting the 3 pages into the slot
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
